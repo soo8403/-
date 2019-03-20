@@ -56,5 +56,15 @@
 
 > 실행방법
 
-* API Specofications
+* API Specifications
+
+POST | /api/banks/q1
+
+GET | /api/banks/q2
+
+GET | /api/banks/q3
+
+GET | /api/banks/q4
+
+GET | /api/banks/q5/외환은행
 
