@@ -59,6 +59,10 @@
 
 > 실행방법
 
+**접속**
+
+http://localhost:80/api/bank
+
 **API Specifications**
 
 [POST] /api/banks/q1
@@ -70,4 +74,6 @@
 [GET] /api/banks/q4
 
 [GET] /api/banks/q5/외환은행
+
+
 
