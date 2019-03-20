@@ -32,7 +32,7 @@ public class BankController {
 	@Autowired
 	HouseLoanRepository houseLoanRepository;	
 	
-	@GetMapping("/q1") 
+	@RequestMapping(value = "/q2", method = RequestMethod.POST) 
 	public ResponseEntity<String> importData() {
 		
 		File path = new File("");

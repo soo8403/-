@@ -74,7 +74,7 @@ public class BankService {
 		//2. 연도별 은행별 합계 
 		Map<String, Map<String, Double>> detailSumAmtByYear =
 				result.stream().collect(Collectors.groupingBy(HouseLoan::getYyyy
-											,Collectors.groupingBy(HouseLoan::getInstituteCode, Collectors.summingDouble(HouseLoan::getAmt))));
+											,Collectors.groupingBy(HouseLoan::getBankCode, Collectors.summingDouble(HouseLoan::getAmt))));
 		//1과 2를 재조합
 		List resultList = new ArrayList();
 		for( String key : totalSumAmtByYear.keySet() ){ 
@@ -109,7 +109,7 @@ public class BankService {
 		//연도별 은행별 합계 
 		Map<String, Map<String, Double>> detailSumAmtByYear =
 				result.stream().collect(Collectors.groupingBy(HouseLoan::getYyyy
-											,Collectors.groupingBy(HouseLoan::getInstituteCode, Collectors.summingDouble(HouseLoan::getAmt))));
+											,Collectors.groupingBy(HouseLoan::getBankCode, Collectors.summingDouble(HouseLoan::getAmt))));
 		
 		Double max = 0.0;  //최대깂 초기화
 		BankResultDto dto = null;
@@ -158,7 +158,7 @@ public class BankService {
 		
 		//입력한 은행의 평균지원금액 
 		Map<String, Double> avgYearByBank 
-			= list.stream().filter(houseloan->houseloan.getInstituteCode().equals(backCode))
+			= list.stream().filter(houseloan->houseloan.getBankCode().equals(backCode))
 						   .collect(Collectors.groupingBy(HouseLoan::getYyyy
 										,Collectors.averagingDouble(HouseLoan::getAmt))
 							);

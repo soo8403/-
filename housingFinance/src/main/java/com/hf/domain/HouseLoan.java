@@ -31,7 +31,7 @@ public class HouseLoan {
 	private Long idx;
 	
 	@Column
-	String instituteCode;
+	String bankCode;
 	
 	@Column
 	private String yyyy;
@@ -43,8 +43,8 @@ public class HouseLoan {
 	private Long amt;
 	
 	@Builder
-	public HouseLoan(String instituteCode, String yyyy, String mm, Long amt) {
-		this.instituteCode = instituteCode;
+	public HouseLoan(String bankCode, String yyyy, String mm, Long amt) {
+		this.bankCode = bankCode;
 		this.yyyy = yyyy;
 		this.mm = mm;
 		this.amt = amt;
